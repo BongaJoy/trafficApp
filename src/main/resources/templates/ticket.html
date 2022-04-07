@@ -1,15 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css"/>
     <link href="css/ticket.css" rel="stylesheet" />
     <title>Ticket Form</title>
 </head>
 <body>
 <div class="container">
-    <form action="action_page.php">
+    <form>
         <div class="headings">
             <h1>INFRINGER  AND MOTOR VEHICLE PARTICULARS</h1>
 
@@ -20,7 +21,7 @@
                 <label for="fname">First Names</label>
             </div>
             <div class="col-75">
-                <input type="text" id="fname" name="firstname" placeholder="Your names..">
+                <input type="text" id="fname" name="firstname" placeholder="Your names.." >
             </div>
         </div>
 
@@ -29,7 +30,7 @@
                 <label for="lname">Last Name</label>
             </div>
             <div class="col-75">
-                <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                <input type="text" id="lname" name="lastname" placeholder="Your last name.." >
             </div>
         </div>
 
@@ -38,7 +39,7 @@
                 <label for="initials">Initials</label>
             </div>
             <div class="col-75">
-                <input type="text" id="initials" name="initials" placeholder="Your initials..">
+                <input type="text" id="initials" name="initials" placeholder="Your initials.." >
             </div>
         </div>
 
@@ -56,7 +57,7 @@
                 <label for="idType">ID type</label>
             </div>
             <div class="col-75">
-                <select id="idType" name="idType">
+                <select id="idType" name="idType" >
                     <option value="Select">Select</option>
                     <option value="RSA">RSA</option>
                     <option value="Passport">Passport</option>
@@ -71,7 +72,7 @@
                 <label for="gender">Gender</label>
             </div>
             <div class="col-75">
-                <select id="gender" name="gender">
+                <select id="gender" name="gender" >
                     <option value="Select">Select</option>
                     <option value="Male">Male</option>
                     <option value="Female">Female</option>
@@ -84,7 +85,7 @@
                 <label for="idNumber">ID number</label>
             </div>
             <div class="col-75">
-                <input type="text" id="idNumber" name="idNumber" maxlength="13" placeholder="ID number..">
+                <input type="text" id="idNumber" name="idNumber" maxlength="13" placeholder="ID number.." >
             </div>
         </div>
 
@@ -93,7 +94,7 @@
                 <label for="foreignCode">Foreign code</label>
             </div>
             <div class="col-75">
-                <input type="text" id="foreignCode" name="foreignCode" maxlength="10" placeholder="code...">
+                <input type="text" id="foreignCode" name="foreignCode" maxlength="10" placeholder="code..." >
             </div>
         </div>
 
@@ -102,7 +103,7 @@
                 <label for="licenceCode">Licence code</label>
             </div>
             <div class="col-75">
-                <select id="licenceCode" name="licenceCode">
+                <select id="licenceCode" name="licenceCode" >
                     <option value="Select">Select</option>
                     <option value="A1">A1</option>
                     <option value="A">A</option>
@@ -122,7 +123,7 @@
                 <label for="learnerCode">Learner code</label>
             </div>
             <div class="col-75">
-                <select id="learnerCode" name="learnerCode">
+                <select id="learnerCode" name="learnerCode" >
                     <option value="Select">Select</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
@@ -136,7 +137,7 @@
                 <label for="PrDPcode">PrDP code</label>
             </div>
             <div class="col-75">
-                <select id="PrDPcode" name="PrDPcode">
+                <select id="PrDPcode" name="PrDPcode" >
                     <option value="Select">Select</option>
                     <option value="Goods">Goods</option>
                     <option value="Passngers">Passngers</option>
@@ -148,7 +149,7 @@
 
         <div class="pnstyle">
 
-            <a href="contact.html" class="next">Next &raquo;</a>
+            <a th:href="#" class="next">Next &raquo;</a>
 
         </div>
 

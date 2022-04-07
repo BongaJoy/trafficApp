@@ -4,16 +4,9 @@
     <meta charset="UTF-8">
     <title>Home - AARTO</title>
     <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css"/>
-    <link href="css/styles.css" rel="stylesheet" />
-    <style>
-    .bck-img{
-         background-image: url("image/coat.png");
-         background-size: cover;
-         }
-
-    </style>
+    <link href="css/style.css" rel="stylesheet" />
 </head>
-<body class="bck-img" >
+<body class="bck-img">
 <!-- Responsive navbar-->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container px-5">
@@ -21,9 +14,9 @@
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                <li class="nav-item"><a class="nav-link active" aria-current="page" href="#!">Login</a></li>
-                <li class="nav-item"><a class="nav-link" th:href="">Contact us </a></li>
-                <li class="nav-item"><a class="nav-link" th:href="">About</a></li>
+                <li class="nav-item"><a class="nav-link active" aria-current="page" href="#!">Home</a></li>
+                <li class="nav-item"><a class="nav-link" th:href="@{/login}">Login</a></li>
+                <li class="nav-item"><a class="nav-link" th:href="@{/register}">Register</a></li>
 
             </ul>
         </div>
@@ -40,11 +33,11 @@
                             <div class="card-body">
                                 <form th:action="@{/users}" method="post">
                                     <div class="form-floating mb-3">
-                                        <input class="form-control" id="email" type="email" required/>
+                                        <input class="form-control" id="email" type="email" placeholder="name@example.com" />
                                         <label for="email">Email address</label>
                                     </div>
                                     <div class="form-floating mb-3">
-                                        <input class="form-control" id="password" type="password" required/>
+                                        <input class="form-control" id="password" type="password" placeholder="Password" />
                                         <label for="password">Password</label>
                                     </div>
                                     <div class="form-check mb-3">
@@ -52,14 +45,14 @@
                                         <label class="form-check-label" for="inputRememberPassword">Remember Password</label>
                                     </div>
                                     <div class="d-flex align-items-center justify-content-between mt-4 mb-0">
-                                        <a class="small" th:href="@{/password}">Forgot Password?</a>
+                                        <a class="small" href="password.html">Forgot Password?</a>
                                         <!--<a class="btn btn-primary" href="index.html">Login</a>-->
-                                        <button type="submit" class="btn btn-warning">Log in</button>
+                                        <button type="submit" class="btn">Log in</button>
                                     </div>
                                 </form>
                             </div>
                             <div class="card-footer text-center py-3">
-                                <div class="small"><a th:href="@{register}">Need an account? Sign up!</a></div>
+                                <div class="small"><a href="register.html">Need an account? Sign up!</a></div>
                             </div>
                         </div>
                     </div>
@@ -67,43 +60,19 @@
             </div>
         </main>
     </div>
-<!-- Header-->
-<!--<header class="bg-dark py-5">
-    <div class="container px-5">
-        <div class="row gx-5 justify-content-center">
-            <div class="col-lg-6">
-                <div class="text-center my-5">
-                    <h1 class="display-5 fw-bolder text-white mb-2">Welcome to Administrative adjudication of road traffic offences</h1>
-                    <p class="lead text-white-50 mb-4">An Infringement notice is commonly known as a traffic ticket. It is an issuing authority letting an alleged infringer know that they have break the traffic law.</p>
-                    <div class="d-grid gap-3 d-sm-flex justify-content-sm-center">
-                        <a class="btn btn-primary btn-lg px-4 me-sm-3" th:href="@{/login}">login</a>
-                        <a class="btn btn-outline-light btn-lg px-4" th:href="@{register}">Register</a>
-                    </div>
-                </div>
-            </div>
+   <br>
+    <br>
+<footer>
+    <div class="row">
+        <div class="col-12">
+            <p class="text-center">
+                © Copyright 2022<br>
+                Ithala is an Authorised Financial Services and Credit Provider<br>
+                FSP License No. 17139 NCRCP No. 1559 Reg No. 2001/007427/30<br>
+                Ithala SOC Limited is a wholly-owned subsidiary of Ithala Development Finance Corporation Limited
+            </p>
         </div>
     </div>
-</header>-->
-
-    <br>
-    <br>
-
-    <div id="layoutAuthentication_footer">
-        <footer class="py-4 bg-light mt-auto ">
-            <div class="container-fluid px-4">
-                <div class="d-flex align-items-center justify-content-between small">
-                    <div class="text-muted " >Copyright &copy; AARTO 2022</div>
-                    <div>
-                        <a href="#">Privacy Policy</a>
-                        &middot;
-                        <a href="#">Terms &amp; Conditions</a>
-                    </div>
-                </div>
-            </div>
-        </footer>
-    </div>
-</div>
-
-
+</footer>
 </body>
 </html>

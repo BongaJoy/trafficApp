@@ -16,11 +16,12 @@ public class UserController {
     @Autowired
     private UserRepository repo;
 
-    @GetMapping("")
+    @GetMapping("index")
     public String  viewHomePage()
     {
         return "index";
     }
+
 
     @GetMapping("/register")
     public String showSignUpForm(Model model)
@@ -46,4 +47,6 @@ public class UserController {
         model.addAttribute("listUsers", listUsers);
         return "users";
     }
+
+
 }
