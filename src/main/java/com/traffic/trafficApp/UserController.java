@@ -19,7 +19,7 @@ public class UserController {
     @GetMapping("")
     public String  viewHomePage()
     {
-        return "index";
+        return "ticket";
     }
 
 
@@ -30,6 +30,23 @@ public class UserController {
         return "signup_form";
     }
 
+    @GetMapping("/ticketPage")
+    public String showTicketWelcomePage(Model model)
+    {
+        return "ticketPage";
+    }
+
+    @GetMapping("/login")
+    public String loginPage(Model model)
+    {
+        return "login";
+    }
+
+    @GetMapping("/password")
+    public String showPasswordResetPage(Model model)
+    {
+        return "password";
+    }
     @PostMapping("/process_register")
     public String processRegistration(User user)
     {

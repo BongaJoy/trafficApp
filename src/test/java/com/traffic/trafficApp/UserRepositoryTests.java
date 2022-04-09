@@ -42,5 +42,6 @@ public class UserRepositoryTests {
         User user = repo.findByEmail(email);
 
         assertThat(user).isNotNull();
+        System.out.println(user);
     }
 }

@@ -47,16 +47,19 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
 		http.authorizeRequests()
-			.antMatchers("/users").authenticated()
+			.antMatchers("/ticketPage").authenticated()
 			.anyRequest().permitAll()
 			.and()
 			.formLogin()
-				.loginPage("/index")
-				.usernameParameter("email")
-				.defaultSuccessUrl("/users")
 				.permitAll()
+				.loginPage("/login")
+				.usernameParameter("email")
+				.passwordParameter("motdepass")
+				.loginProcessingUrl("/ticketPage")
 			.and()
-			.logout().logoutSuccessUrl("/").permitAll();
+			.logout().permitAll()
+			.and()
+			.exceptionHandling().accessDeniedPage("/403");
 	}
 	
 	
